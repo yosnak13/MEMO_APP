@@ -5,6 +5,10 @@
         {{ memo.title }}： {{ memo.description }}
       </li>
     </ul>
+    <div>
+      <input v-model="text" placeholder="title">
+      <input v-model="description" placeholder="description">
+    </div>
   </div>
 </template>
 
@@ -14,7 +18,9 @@ import axios from 'axios';
 export default {
   data: function () {
     return {
-      memos: "memos"
+      memos: "memos",
+      title: "",
+      description: "",
     }
   },
   mounted () {
