@@ -33,6 +33,15 @@ export default {
       .then(response => (
         this.memos = response.data
       ))
+    },
+    addMemo: function() {
+      axios.post('/api/memos', {
+        title: this.title,
+        description: this.description
+      })
+      .then(response => (
+        this.setMemo()
+      ));
     }
   }
 }
