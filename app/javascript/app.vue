@@ -8,7 +8,7 @@
     <div>
       <input v-model="text" placeholder="title">
       <input v-model="description" placeholder="description">
-      <button v-oon:click="addMemo">メモを追加</button>
+      <button @click="addMemo">メモを追加</button>
     </div>
   </div>
 </template>
