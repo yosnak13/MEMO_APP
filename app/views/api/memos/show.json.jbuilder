@@ -1,2 +1,2 @@
-json.title @memo.title
+json.title       @memo.title
 json.description @memo.description
