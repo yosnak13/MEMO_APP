@@ -6,7 +6,7 @@
       </li>
     </ul>
     <div>
-      <input v-model="text" placeholder="title">
+      <input v-model="title" placeholder="title">
       <input v-model="description" placeholder="description">
       <button @click="addMemo">メモを追加</button>
     </div>
