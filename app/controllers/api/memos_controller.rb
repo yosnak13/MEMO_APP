@@ -12,6 +12,11 @@ class Api::MemosController < ApplicationController
     end
   end
 
+  def destroy
+    @memo.destroy
+    redirect_to 
+  end
+
   private
     def memo_params
       params.permit(:title, :description)
