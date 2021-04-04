@@ -13,8 +13,9 @@ class Api::MemosController < ApplicationController
   end
 
   def destroy
+    @memo = Memo.find(params[:id])
     @memo.destroy
-    redirect_to 
+    redirect_to root_path
   end
 
   private

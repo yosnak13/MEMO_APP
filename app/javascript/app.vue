@@ -7,6 +7,7 @@
       <div class="form-group">
         <input v-model="description" placeholder="description" class="form-control">
       </div>
+      <!-- ↓<button v-on:click="addMemo">メモを追加</button>の書き換え↓-->
       <button @click="addMemo">メモを追加</button>
     </div>
     <div class="flex">
@@ -16,6 +17,7 @@
             {{ memo.title }}
           </div>
           {{ memo.description }}
+          <button @click="deleteMemo">削除</button>
         </div>
       </div>
     </div>
@@ -50,6 +52,15 @@ export default {
       })
       .then(response => (
         this.setMemo()
+      ));
+    },
+    deleteMemo: function() {
+      axios.delete('/api/memos/:id', {
+        title: this.title,
+        description: this.description
+      })
+      .this(resoponse => (
+        this.setMemo
       ));
     }
   }
