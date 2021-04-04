@@ -61,6 +61,7 @@ export default {
       })
       .this(resoponse => (
         this.setMemo
+        
       ));
     }
   }
